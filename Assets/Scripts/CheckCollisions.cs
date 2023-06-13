@@ -18,6 +18,14 @@ private void OnTriggerEnter(Collider other)
     //Debug.Log(other.gameObject.name);
  }
 }
+
+private void OnCollisionEnter(Collision collision) {
+  if(collision.gameObject.CompareTag("Obstacle"))
+  {
+    Debug.Log("Touched Obstacle!");
+  }
+  
+}
 public void AddBook()
 {
   score++;
