@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 80dd56711470ea44892144d2d7953c5a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Diamond Gothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 87a7fa1fc52910046a0fe2f07449228c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
