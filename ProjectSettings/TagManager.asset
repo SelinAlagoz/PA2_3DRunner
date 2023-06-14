@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Monster
   - End
+  - Collision
   layers:
   - Default
   - TransparentFX

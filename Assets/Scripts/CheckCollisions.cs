@@ -13,20 +13,20 @@ private void OnTriggerEnter(Collider other)
 {
  if(other.CompareTag("Book"))
  {
-   AddBook();
-   other.gameObject.SetActive(false); 
-    //Destroy(other.gameObject);
-    //Debug.Log(other.gameObject.name);
+      AddBook();
+      other.gameObject.SetActive(false); 
+      //Destroy(other.gameObject);
+      //Debug.Log(other.gameObject.name);
  }
- else if (other.CompareTag("End"))
- {
-   Debug.Log("Congrats... !");
-   playerController.runningSpeed = 0;
- }
+    else if (other.CompareTag("End"))
+    {
+        Debug.Log("Congrats... !");
+        playerController.runningSpeed = 0;
+    }
 }
 
 private void OnCollisionEnter(Collision collision) {
-  if(collision.gameObject.CompareTag("Obstacle"))
+  if(collision.gameObject.CompareTag("Collision"))
   {
     Debug.Log("Touched Obstacle!");
   }
