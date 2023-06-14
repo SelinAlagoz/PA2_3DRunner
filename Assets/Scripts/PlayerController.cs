@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float xSpeed;
     public float limitx;
     float limitxe = 2.5f;
+
+    
     void Start()
     {
         
