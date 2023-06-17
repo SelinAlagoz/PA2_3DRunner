@@ -9,6 +9,7 @@ TagManager:
   - Monster
   - End
   - Collision
+  - MonsterWalk
   layers:
   - Default
   - TransparentFX

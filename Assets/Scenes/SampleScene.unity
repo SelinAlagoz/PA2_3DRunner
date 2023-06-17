@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.98021
@@ -838,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2da1ad236f001974c873f7f6c78df9a2, type: 2}
+    - target: {fileID: 9500000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
 --- !u!1001 &369038781
@@ -1709,6 +1717,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.98021
@@ -2293,6 +2305,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2da1ad236f001974c873f7f6c78df9a2, type: 2}
+    - target: {fileID: 9500000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
 --- !u!1001 &903804094
@@ -3104,7 +3120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_TagString
-      value: Monster
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_TagString
+      value: MonsterWalk
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3690,6 +3710,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3f42d84c31c70bf4aa1272a872daa933, type: 2}
+    - target: {fileID: 9500000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
 --- !u!1 &1176404705 stripped
@@ -3706,17 +3730,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176404705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf941de04ea29d4cb7e8b0ae4c68f3b, type: 3}
+  m_Script: {fileID: 11500000, guid: f2473e118f96ad14bbb8e4a52c4452d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  angle: 49
-  playerRef: {fileID: 0}
+  angle: 159
+  playerRef: {fileID: 358449067}
   targetMask:
-    m_Bits: 0
+    serializedVersion: 2
+    m_Bits: 64
   obstructionMask:
+    serializedVersion: 2
     m_Bits: 0
-  animator: {fileID: 0}
   CanSeePlayers: 0
 --- !u!114 &1176404707
 MonoBehaviour:
@@ -3734,28 +3759,6 @@ MonoBehaviour:
   - {fileID: 1090989590}
   - {fileID: 1260339807}
   moveSpeed: 5
---- !u!114 &1176404708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176404705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0404ebe58836bd45b5ff9e0b6f88974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 5
-  angle: 145
-  playerRef: {fileID: 358449067}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 64
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  CanSeePlayers: 0
 --- !u!1001 &1205898425
 PrefabInstance:
   m_ObjectHideFlags: 0
