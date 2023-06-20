@@ -16,7 +16,7 @@ public class WalkingCrFieldOfView : MonoBehaviour
      private Animator animator;
     //public Animator crawlerAnimator;
     //public Animator crawlerwalkingAnimator;
-    //public float vurmaMesafesi = 5f;
+    public float vurmaMesafesi = 1f;
 
 
     public bool CanSeePlayers;
@@ -57,28 +57,29 @@ public class WalkingCrFieldOfView : MonoBehaviour
                 {
                     CanSeePlayers = true;
                     //crawlerAnimator.SetTrigger("Attack");
-                    animator.SetTrigger("Attack");
-                    /*if (distanceToTarget <= vurmaMesafesi)
+                    animator.SetTrigger("DidSee");
+                    if (distanceToTarget <= vurmaMesafesi)
                     {
-                        crawlerwalkingAnimator.SetTrigger("Attack");
-            
-                        crawlerwalkingAnimator.SetTrigger("DidSee");
+                        animator.SetTrigger("Attack");
                     }
                     else
                     {
-                        crawlerwalkingAnimator.SetTrigger("Crawler");
-                        crawlerAnimator.SetTrigger("NotAttack");
-                    }*/
+                        animator.SetTrigger("Crawler");
+                        
+                    }
                 }
                     
                     
                     else CanSeePlayers = false;
+                    animator.SetTrigger("Crawler");
             }
             else 
                CanSeePlayers = false;
+               animator.SetTrigger("Crawler");
         }
         else if(CanSeePlayers)
             CanSeePlayers = false;
+            animator.SetTrigger("Crawler");
     }
 
     // Update is called once per frame

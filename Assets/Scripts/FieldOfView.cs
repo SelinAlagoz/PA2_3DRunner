@@ -73,12 +73,15 @@ public class FieldOfView : MonoBehaviour
                     
                     
                     else CanSeePlayers = false;
+                    animator.SetTrigger("NotAttack");
             }
             else 
                CanSeePlayers = false;
+               animator.SetTrigger("NotAttack");
         }
         else if(CanSeePlayers)
             CanSeePlayers = false;
+            animator.SetTrigger("NotAttack");
     }
 
     // Update is called once per frame
