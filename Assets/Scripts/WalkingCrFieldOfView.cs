@@ -25,7 +25,7 @@ public class WalkingCrFieldOfView : MonoBehaviour
         //crawlerAnimator = GameObject.FindGameObjectWithTag("Monster").GetComponent<Animator>();
         //crawlerAnimator = GameObject.FindGameObjectWithTag("MonsterWalk").GetComponent<Animator>();
         animator = GetComponent<Animator>();
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        playerRef = GameObject.FindGameObjectWithTag("Runner");
         StartCoroutine(FOVRoutine());
     }
 

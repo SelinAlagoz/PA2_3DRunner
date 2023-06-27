@@ -10,6 +10,10 @@ TagManager:
   - End
   - Collision
   - MonsterWalk
+  - Barricate
+  - SpeedBoost
+  - Diaboli
+  - Runner
   layers:
   - Default
   - TransparentFX

@@ -10,14 +10,17 @@ public class PlayerMotor : MonoBehaviour {
 
     //Animation
     private Animator anim;
+    public bool canMove = false;
+    public GameManager gameManager;
 
     //Movement
     private CharacterController controller;
-    private float jumpForce = 6.5f;
+    private float jumpForce = 7f;
     private float gravity = 12f;
     private float verticalVelocity;
     public float speed = 9f;
     private int desiredLane = 1; // 0 = left, 1 = middle, 2 = right
+    [SerializeField] AudioSource jump;
 
     private void Start()
     {
@@ -27,6 +30,10 @@ public class PlayerMotor : MonoBehaviour {
 
     private void Update()
     {
+
+        if (!canMove)
+        return;
+
         //Gather inputs on which lane we should be
         if (MobileInput.Instance.SwipeLeft)
             MoveLane(false);
@@ -59,6 +66,7 @@ public class PlayerMotor : MonoBehaviour {
             {
                 //jump
                 anim.SetTrigger("Jump");
+                jump.Play();
                 verticalVelocity = jumpForce;
             }
         }
@@ -90,6 +98,11 @@ public class PlayerMotor : MonoBehaviour {
       
     }
 
+
+    public void SetCanMove(bool move)
+    {
+       canMove = move;
+    }
     private void MoveLane(bool goingRight)
     {
         desiredLane += goingRight ? 1 : -1;
