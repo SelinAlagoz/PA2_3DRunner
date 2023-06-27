@@ -49,8 +49,6 @@ private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Congrats... !");
         PlayerFinished();
-        transform.Rotate(transform.rotation.x, 180, transform.rotation.z, Space.Self);
-        RestartPanel.SetActive(true);
         if (ig.namesTxt[2].text == "Player")
             {
                 Debug.Log("Congrats!..");
@@ -86,6 +84,11 @@ private void OnTriggerEnter(Collider other)
 void PlayerFinished() 
 {
     playerMotor.speed = 0f;
+    Transform cameraTransform = Camera.main.transform;
+    Vector3 lookAtPosition = new Vector3(cameraTransform.position.x, transform.position.y, cameraTransform.position.z);
+    transform.LookAt(lookAtPosition);
+    RestartPanel.SetActive(true);
+     GameManager.instance.isGameOver = true; //when we use it this way, we don't need to take a reference.
 }
 
 private void OnCollisionEnter(Collision collision) {

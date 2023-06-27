@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager instance; //
     private InGameRanking ig;
 
     private List<RankingSystem> sortArray = new List<RankingSystem>();
@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static bool GameStarted;
     private bool canMove; // Yeni eklendi
     public PlayerMotor playerMotor;
+    public bool isGameOver = false;
 
     private void Awake()
     {
@@ -66,7 +67,6 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-        // Oyun başladığında karakterin hareket etmesini sağlayalım
         playerMotor.SetCanMove(true);
     }
 }

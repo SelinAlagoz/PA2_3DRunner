@@ -534,11 +534,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 940368254127436111, guid: e2b0bfc54787a6d498682d42bfc58c94, type: 3}
   m_PrefabInstance: {fileID: 150903928}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &211369737 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1187ff9373bcbe74487b3ddd8a0f09d7, type: 3}
-  m_PrefabInstance: {fileID: 837526766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &225105510 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100108, guid: aa723b44260e74040869a722c46a85c5, type: 3}
@@ -1392,7 +1387,7 @@ GameObject:
   - component: {fileID: 378941389}
   - component: {fileID: 378941391}
   m_Layer: 0
-  m_Name: Necromancer
+  m_Name: Necro
   m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,7 +1431,6 @@ MonoBehaviour:
   Target: {fileID: 619279129}
   Agent: {fileID: 378941383}
   speedBoosterIcon: {fileID: 1443079291}
-  AgentAnim: {fileID: 652916183}
 --- !u!114 &378941386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,13 +2099,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f816b17c1e7abde498d63f4feade3da8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.23
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 206
+  Priority: 125
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2353,8 +2347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a2cb76ce212bf46a6b95f1b9d2980d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
-  InputField: {fileID: 0}
 --- !u!224 &538941944 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5872194086143769178, guid: c8a8625326f5542469f515f61ad1e74b, type: 3}
@@ -2630,11 +2622,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b0bfc54787a6d498682d42bfc58c94, type: 3}
---- !u!95 &652916183 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 959a7de5c7efb5d4d880169f9724a95f, type: 3}
-  m_PrefabInstance: {fileID: 986171338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &671848364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6233,7 +6220,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.38
-  m_Speed: 10
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 2
   m_AngularSpeed: 120
@@ -6261,7 +6248,6 @@ MonoBehaviour:
   Target: {fileID: 619279129}
   Agent: {fileID: 1073175621}
   speedBoosterIcon: {fileID: 2035259619}
-  AgentAnim: {fileID: 211369737}
 --- !u!114 &1073175624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8420,6 +8406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMotor: {fileID: 675423359}
+  isGameOver: 0
 --- !u!4 &1580124786
 Transform:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class Opponent : MonoBehaviour
 
     Vector3 OpponentStartPos;
     public GameObject speedBoosterIcon;
-    public Animator AgentAnim;
+    private Animator AgentAnim;
     private PlayerMotor playerMotor;
     
 
@@ -33,6 +33,10 @@ public class Opponent : MonoBehaviour
     {
          if (playerMotor.canMove)
         OpponentAgent.SetDestination(Target.transform.position);
+        if(GameManager.instance.isGameOver)
+        {
+            OpponentAgent.Stop();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

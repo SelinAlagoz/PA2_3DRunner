@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CrawlerMovement : MonoBehaviour
 {
-    public Transform[] waypoints; // Hareket edilecek noktaların referansları
-    public float moveSpeed = 5f; // Hareket hızı
-    private int currentWaypointIndex = 0; // Şu anki hedef nokta index'i
+    public Transform[] waypoints; // References of moving points
+    public float moveSpeed = 5f; // movement speed
+    private int currentWaypointIndex = 0; // current destination index
     void Start()
     {
         
@@ -15,22 +15,22 @@ public class CrawlerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  // Hedef noktaya doğru hareket etme
+  // Move towards the target point
     Vector3 targetPosition = waypoints[currentWaypointIndex].position;
     transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-    // Hedef noktaya ulaşıldığında bir sonraki hedef noktaya geçme
+    // Proceed to the next target point when the target point is reached
     if (transform.position == targetPosition)
     {
         currentWaypointIndex++;
         if (currentWaypointIndex >= waypoints.Length)
         {
-            currentWaypointIndex = 0; // Son noktaya ulaşıldığında başa dön
+            currentWaypointIndex = 0; // Back to top when end point is reached
         }
 
-        // Yeni hedef noktaya geçildiğinde karakterin rotasyonunu belirle
+        // Set character's rotation when moving to new target point
         Vector3 direction = waypoints[currentWaypointIndex].position - transform.position;
-         // Y yönünü sıfırla
+         // Reset Y direction
 
             
             Quaternion targetRotation = Quaternion.LookRotation(-direction.normalized,Vector3.up)* Quaternion.Euler(0f, 180f, 0f);
